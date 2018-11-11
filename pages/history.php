@@ -45,7 +45,7 @@
                                         <td><?php echo $dataobj->power3 . " kW"; ?></td>
                                         <td><?php echo $dataobj->power4 . " kW"; ?></td>
                                         <td><?php echo $dataobj->power5 . " kW"; ?></td>
-                                        <td><?php echo date("y-m-d h:i:sa"); ?></td>
+                                        <td><?php echo $dataobj->dateTime; ?></td>
                                         <td><a href=<?php echo "\"index.php?page=recordDetail&id=" . $dataobj->id . "\""; ?>><button class="btn btn-info">Detail</button></a></td>
                                     </tr>
                                     <?php
