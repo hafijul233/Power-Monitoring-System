@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-              <a class="navbar-brand" href="index.php?page=dashboard"><?php echo $projectTitle; ?> <small><?php echo $currentVersion; ?></small></a>
+              <a class="navbar-brand" href="index.php?page=dashboard"><?php echo $projectTitle; ?></a>
             </div>
             <!-- /.navbar-header -->
 

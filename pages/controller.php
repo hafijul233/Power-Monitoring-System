@@ -4,6 +4,9 @@ if($page != NULL){
         case "dashboard": require 'dashboard.php';
             break;
         
+        case "recordDetail": require 'recordDetail.php';
+            break;
+        
         case "history": require 'history.php';
             break;
         
@@ -15,7 +18,6 @@ if($page != NULL){
         
         case "notification": require 'notifications.php';
             break;
-        
         
         default :require '404.php';
             break;

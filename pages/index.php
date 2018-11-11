@@ -1,5 +1,5 @@
 <?php
-require 'configuration.php';
+require '../config/config.php';
 if(empty($_GET["page"])){
    $page = NULL; 
 }
@@ -15,7 +15,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title><?php echo $programName ." - " . strtoupper($page);?></title>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -33,7 +33,7 @@ else{
         <?php
         include 'partial/header.php';
         ?>
-        <!--Header Closed Hridoy -->
+        <!--Header Closed -->
         <?php
         require 'controller.php';
         ?>

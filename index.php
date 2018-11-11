@@ -1,10 +1,13 @@
+<?php
+    require 'config/config.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="refresh" content="0;url=pages/index.php">
-<title>SB Admin 2</title>
+<title><?php echo $programName; ?></title>
 <script language="javascript">
-    window.location.href = "pages/index.php"
+    window.location.href = "pages/login.php"
 </script>
 </head>
 <body>

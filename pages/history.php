@@ -13,7 +13,7 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-green">
                         <div class="panel-heading">
                             Power Cumsumpution Record List
                         </div>
@@ -27,22 +27,26 @@
                                         <th>Device 2</th>
                                         <th>Device 3</th>
                                         <th>Device 4</th>
+                                        <th>Device 5</th>
                                         <th>Record Time</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 	<?php
-                                	for($i=0;$i<=50;$i++){
+                                        require 'operation/displayDataProcess.php';
+                                	
+                                        foreach ($dataArray as $dataobj){
                                 	?>
                                     <tr>
-                                        <td>220 Volt</td>
-                                        <td><?php echo mt_rand(1,20) . " kWh"; ?></td>
-                                        <td><?php echo mt_rand(1,20) . " kWh"; ?></td>
-                                        <td><?php echo mt_rand(1,20) . " kWh"; ?></td>
-                                        <td><?php echo mt_rand(1,20) . " kWh"; ?></td>
+                                        <td><?php echo $dataobj->voltage . " Volt"; ?></td>
+                                        <td><?php echo $dataobj->power1 . " kW"; ?></td>
+                                        <td><?php echo $dataobj->power2 . " kW"; ?></td>
+                                        <td><?php echo $dataobj->power3 . " kW"; ?></td>
+                                        <td><?php echo $dataobj->power4 . " kW"; ?></td>
+                                        <td><?php echo $dataobj->power5 . " kW"; ?></td>
                                         <td><?php echo date("y-m-d h:i:sa"); ?></td>
-                                        <td><a href="#"><button class="btn btn-info">Detail</button></a></td>
+                                        <td><a href=<?php echo "\"index.php?page=recordDetail&id=" . $dataobj->id . "\""; ?>><button class="btn btn-info">Detail</button></a></td>
                                     </tr>
                                     <?php
                                 	}
@@ -55,6 +59,7 @@
                                         <th>Device 2</th>
                                         <th>Device 3</th>
                                         <th>Device 4</th>
+                                        <th>Device 5</th>
                                         <th>Record Time</th>
                                         <th>Action</th>
                                     </tr>
