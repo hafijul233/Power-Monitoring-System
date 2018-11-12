@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "pms";
+$servername = "iot.travelhostbd.com";
+$username = "hafij";
+$password = "hafij@1234";
+$dbname = "iotpower";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
